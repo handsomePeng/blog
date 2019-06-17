@@ -1,0 +1,62 @@
+<div class="ui modal" style="width: 700px;">
+
+  <div class="header">
+    录入账单数据
+  </div>
+  <div class="image content" style="padding: 1.5rem 6.7rem">
+    <form class="ui form" method="post" action="/bill/add" style="width: 100%;">
+      <div class="field">
+        <label>金额</label>
+        <input type="text" name="num" placeholder="请输入金额数目">
+      </div>
+      <div class="field">
+        <label>备注</label>
+        <textarea rows="2" placeholder="请输入备注信息" name="remark" style="resize: none"></textarea>
+      </div>
+      <div class="field">
+        <label>账单承担人</label>
+      </div>
+      <div class="field">
+        <% userList.forEach(function (user) { %>
+          <div class="ui checkbox" style="margin-right: 20px;">
+            <input type="checkbox" tabindex="0" name="sharer" checked value="<%- user._id %>" class="">
+            <label><%- user.name %></label>
+          </div>
+        <% }) %>
+      </div>
+      <a href="javascript:;" class="submit-btn" style="margin: 30px auto 0;display: block;width: 120px;height: 36px;text-align: center;line-height: 36px;font-size: 14px;background-color: #00c1de;color: #ffffff;">提交</a>
+    </form>
+  </div>
+</div>
+<script>
+  $(function () {
+    $('body').on('click','.submit-btn',function () {
+      var num = $('input[name=num]').val()
+      var remark = $('input[name=remark]').val()
+      var sharerArr = []
+      for (var i=0; i < $('input[name=sharer]').length;i++){
+        if ($('input[name=sharer]')[i].checked){
+          sharerArr.push($('input[name=sharer]').eq(i).val())
+        }
+      }
+      if (sharerArr.length == 0){
+        return alert('请至少选择一个账单承担人！')
+      }
+      var data = {
+        num: num,
+        remark: remark,
+        sharer: sharerArr.join()
+      }
+      $.ajax({
+        type: 'post',
+        data: data,
+        url: '/bill/add',
+        success: function (res) {
+          console.log(res)
+          window.location.reload()
+        }
+      })
+    })
+
+  })
+</script>

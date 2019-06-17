@@ -1,0 +1,15 @@
+<div class="nav">
+  <div class="ui container clearfix">
+    <span class="nav-title"><%- user.name %></span>
+    <div class="dropdown ui user-link-box item">
+      <a href="/bill" class="user-link">
+        <img src="/img/<%- user.avatar %>" class="user-photo" alt="">
+      </a>
+      <div class="menu">
+        <a class="item showAddDataMask" href="javascript:;">录入</a>
+        <a class="item changeStatus" href="javascript:;">结算</a>
+        <a class="item" href="/signout">登出</a>
+      </div>
+    </div>
+  </div>
+</div>

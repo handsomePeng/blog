@@ -1,0 +1,33 @@
+<%- include('billHeader') %>
+<div class="nav">
+  <div class="ui grid">
+    <div class="four wide column"></div>
+
+    <div class="eight wide column">
+      <a href="/bill"><h1>西乡景田大厦1007工作室</h1></a>
+      <p>记账系统</p>
+    </div>
+  </div>
+</div>
+<div class="ui grid">
+  <div class="four wide column"></div>
+  <div class="eight wide column">
+    <form class="ui form segment" method="post">
+      <div class="field required">
+        <label>用户名</label>
+        <input placeholder="用户名" type="text" name="name">
+      </div>
+      <div class="field required">
+        <label>密码</label>
+        <input placeholder="密码" type="password" name="password">
+      </div>
+      <input type="submit" class="ui button fluid" value="登录">
+      <div class="" style="height: 40px;margin: 20px auto 0;border-radius: 4px;overflow: hidden">
+        <a href="/signup" class="" style="font-weight: 700;font-size: 1rem;display: block;width: 100%;height: 40px;line-height: 40px;color: #ffffff;background-color: #4fc08d;text-align: center">注册</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<%- include('billFooter') %>

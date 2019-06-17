@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  $(function () {
+    //点击按钮弹出下拉框
+    $('.ui.dropdown').dropdown()
+    //鼠标悬浮在头像上，弹出气泡提示框
+
+    $('body').on('click','.showAddDataMask',function () {
+      $('.ui.modal').modal('show')
+    })
+    
+    $('body').on('click', '.changeStatus', function () {
+      var r=confirm("确定要结算当前所有未结算账单吗（请务必与其他人确认清楚再结算）？")
+      if (r==true)
+      {
+        $.ajax({
+          type: 'post',
+          url: '/bill/changeStatus',
+          success: function (res) {
+            console.log(res)
+          }
+        })
+      }
+      else
+      {
+
+      }
+    })
+  })
+</script>
+</body>
+</html>

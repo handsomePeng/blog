@@ -1,0 +1,27 @@
+<div class="bill-type-data">
+  <div class="ui container clearfix">
+    <p class="type-data-title">账单汇总</p>
+    <ul class="clearfix type-data-list">
+      <li class="list-item close">
+        <p class="list-item-title">已结算总数</p>
+        <p class="list-item-num"><%- data.sumClose.toFixed(2) %></p>
+      </li>
+      <li class="list-item payall">
+        <p class="list-item-title">累计已支出</p>
+        <p class="list-item-num"><%- data.sumPay.toFixed(2) %></p>
+      </li>
+      <li class="list-item unclose">
+        <p class="list-item-title">未结算总数</p>
+        <p class="list-item-num"><%- data.unClose.toFixed(2) %></p>
+      </li>
+      <li class="list-item pay">
+        <p class="list-item-title">未结算支出</p>
+        <p class="list-item-num"><%- data.unClosePay.toFixed(2) %></p>
+      </li>
+      <li class="list-item unpay">
+        <p class="list-item-title"><%= (data.userShouldPay >= 0) ? '本期应支付' : '本期可收入' %></p>
+        <p class="list-item-num"><%= (data.userShouldPay >= 0) ? data.userShouldPay.toFixed(2) : ( 0 - data.userShouldPay ).toFixed(2) %></p>
+      </li>
+    </ul>
+  </div>
+</div>

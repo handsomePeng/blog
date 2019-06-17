@@ -1,0 +1,85 @@
+.nav{
+  padding: 10px 0;
+  background-color: #fafafa;
+}
+.nav-title{
+  line-height: 70px;
+  text-align: left;
+  font-size: 14px;
+  color: #333333;
+  float: left;
+}
+.user-link-box{
+  float: right;
+}
+.user-link{
+  display: block;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+}
+.user-photo{
+  width: 70px;
+  height: 70px;
+}
+.bill-type-data{
+  padding: 20px 0;
+}
+.type-data-title{
+  text-align: center;
+  font-size: 16px;
+  color: #333333;
+}
+.type-data-list{
+  margin-left: -2%;
+  padding-top: 30px;
+}
+.type-data-list .list-item{
+  width: 18%;
+  background-color: #f0f1f5;
+  float: left;
+  height: 120px;
+  margin-left: 2%;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.type-data-list .list-item.unclose .list-item-title{
+  background-color: #f66;
+}
+.type-data-list .list-item.all .list-item-title{
+  background-color: #7a7e99;
+}
+.type-data-list .list-item.unpay .list-item-title{
+  background-color: #fbc06c;
+}
+.type-data-list .list-item.pay .list-item-title{
+  background-color: #8eb4fa;
+}
+.type-data-list .list-item.close .list-item-title{
+  background-color: #5dd290;
+}
+.type-data-list .list-item.payall .list-item-title{
+  background-color: #6cc;
+}
+.type-data-list .list-item.unpay .list-item-title{
+  background-color: #fbc06c;
+}
+.type-data-list .list-item.pay .list-item-title{
+  background-color: #8eb4fa;
+}
+.type-data-list .list-item{}
+.list-item-title{
+  height: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+}
+.list-item-num{
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 84px;
+}
